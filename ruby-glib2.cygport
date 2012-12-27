@@ -1,0 +1,4 @@
+NAME="ruby-glib2"
+VERSION=1.1.8
+RELEASE=1
+inherit rubygem
