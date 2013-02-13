@@ -1,4 +1,9 @@
-NAME="ruby-glib2"
-VERSION=1.1.8
-RELEASE=1
 inherit rubygem
+
+NAME="ruby-glib2"
+VERSION=1.2.1
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby GLib bindings"
+DESCRIPTION="Ruby/GLib2 is a Ruby binding of GLib-2.x."
+HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
