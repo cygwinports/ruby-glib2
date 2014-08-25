@@ -1,9 +1,15 @@
 inherit rubygem
 
 NAME="ruby-glib2"
-VERSION=2.0.2
+VERSION=2.2.0
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby GLib bindings"
 DESCRIPTION="Ruby/GLib2 is a Ruby binding of GLib-2.x."
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
+
+PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
+ruby_glib2_CONTENTS="--exclude=sample ${RUBYGEM_EXTDIR#/} ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_glib2_devel_REQUIRES="${NAME} libglib2.0-devel"
+ruby_glib2_devel_CONTENTS="usr/include/ usr/lib/lib*.a usr/lib/pkgconfig/"
+ruby_glib2_doc_CONTENTS="${RUBYGEM_DOCDIR#/} ${RUBYGEM_INSTDIR#/}/sample/"
