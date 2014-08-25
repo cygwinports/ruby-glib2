@@ -8,6 +8,8 @@ SUMMARY="Ruby GLib bindings"
 DESCRIPTION="Ruby/GLib2 is a Ruby binding of GLib-2.x."
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 
+PATCH_URI="2.2.0-rubygem-dirs.patch"
+
 PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
 ruby_glib2_CONTENTS="--exclude=sample ${RUBYGEM_EXTDIR#/} ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
 ruby_glib2_devel_REQUIRES="${NAME} libglib2.0-devel"

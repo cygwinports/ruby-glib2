@@ -1,0 +1,13 @@
+We no longer ship ext/ in gems, as that is necessary only when building.
+Headers are installed instead into RUBY_HEADERDIR.
+
+--- origsrc/glib2-2.2.0/lib/mkmf-gnome2.rb	2014-08-25 15:35:39.808749000 -0500
++++ src/glib2-2.2.0/lib/mkmf-gnome2.rb	2014-08-25 15:36:11.058717200 -0500
+@@ -142,7 +142,6 @@ def add_depend_package_path(target_name,
+     $INCFLAGS = "-I#{target_source_dir} #{$INCFLAGS}"
+   end
+ 
+-  return unless File.exist?(target_build_dir)
+   if target_source_dir != target_build_dir
+     $INCFLAGS = "-I#{target_build_dir} #{$INCFLAGS}"
+   end
