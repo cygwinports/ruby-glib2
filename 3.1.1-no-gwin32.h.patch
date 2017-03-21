@@ -1,0 +1,11 @@
+--- origsrc/glib2-3.1.1/ext/glib2/extconf.rb	2017-03-19 16:52:53.999664900 -0500
++++ src/glib2-3.1.1/ext/glib2/extconf.rb	2017-03-19 17:05:22.668524000 -0500
+@@ -59,7 +59,7 @@ ignore_headers = [
+   "gmain.h",
+   "gscanner.h",
+ ]
+-unless windows_platform?
++unless /mingw|mswin/ === RUBY_PLATFORM
+   ignore_headers << "gwin32.h"
+ end
+ headers = include_paths.split.inject([]) do |result, path|
